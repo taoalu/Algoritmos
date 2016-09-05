@@ -13,5 +13,6 @@ public class TesteFuncoes {
         m.imprimirLista(array);
         System.out.println("Valor removido: " + m.remover(array, inseridos));
         m.imprimirLista(array);
+        m.imprimirLista(array);
     }
 }
