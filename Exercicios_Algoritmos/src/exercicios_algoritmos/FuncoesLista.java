@@ -1,9 +1,23 @@
 package exercicios_algoritmos;
+
 public class FuncoesLista {
 
-    int remover(int[] array, int fimDoArray) {
-        int valorRemovido = array[fimDoArray];
-        array[fimDoArray] = 0;
+    int remover(int[] array, int posicao) {
+        int valorRemovido = array[posicao];
+        array[posicao] = 0;
+        return valorRemovido;
+    }
+
+    boolean inserirEmQualquerPosicao(int[] array) {
+        int posicao = 0;
+        inserirNoInicio(array, posicao);
+
+        return true;
+    }
+
+    int removerDoInicio(int[] array) {
+        int valorRemovido = array[0];
+        remover(array, 0);
         return valorRemovido;
     }
 
