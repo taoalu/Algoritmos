@@ -8,11 +8,14 @@ public class FuncoesLista {
         return valorRemovido;
     }
 
-    boolean inserirEmQualquerPosicao(int[] array) {
-        int posicao = 0;
-        inserirNoInicio(array, posicao);
-
-        return true;
+    boolean inserirEmQualquerPosicao(int[] array, int posicao, int valor) {
+        if (posicao >= 0 && posicao < array.length) {
+            array[posicao] = valor;
+            return true;
+        } else {
+            System.out.println("Não é possível inserir!");
+        }
+        return false;
     }
 
     int removerDoInicio(int[] array) {
@@ -22,17 +25,14 @@ public class FuncoesLista {
     }
 
     boolean inserirNoInicio(int[] array, int valor) {
-        if (array.length == 0) {
-            return false;
-        } else {
-            int aux;
-            for (int i = 0; i < array.length; i++) {
-                aux = array[i];
-                array[i] = aux;
-            }
-            array[0] = valor;
-            return true;
+        inserirEmQualquerPosicao(array, 0, valor);
+        int aux;
+        for (int i = 0; i < array.length; i++) {
+            aux = array[i];
+            array[i] = aux;
         }
+        array[0] = valor;
+        return true;
     }
 
     void imprimirLista(int[] array) {
