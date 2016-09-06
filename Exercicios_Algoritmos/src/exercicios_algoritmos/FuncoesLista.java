@@ -10,6 +10,7 @@ public class FuncoesLista {
 
     boolean inserirEmQualquerPosicao(int[] array, int posicao, int valor) {
         if (posicao >= 0 && posicao < array.length) {
+            moverParaDireita(array, posicao);
             array[posicao] = valor;
             return true;
         } else {
@@ -26,11 +27,7 @@ public class FuncoesLista {
 
     boolean inserirNoInicio(int[] array, int valor) {
         inserirEmQualquerPosicao(array, 0, valor);
-        int aux;
-        for (int i = 0; i < array.length; i++) {
-            aux = array[i];
-            array[i] = aux;
-        }
+        moverParaDireita(array, 0);
         array[0] = valor;
         return true;
     }
@@ -46,6 +43,14 @@ public class FuncoesLista {
             }
             System.out.println("");
             //Testando
+        }
+    }
+
+    void moverParaDireita(int[] array, int posicao) {
+        int aux;
+        for (int i = posicao; i < array.length; i++) {
+            aux = array[i];
+            array[i] = aux;
         }
     }
 }
