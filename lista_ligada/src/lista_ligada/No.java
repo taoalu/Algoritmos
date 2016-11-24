@@ -6,7 +6,7 @@ public class No {
     No proximo;
 
     public void setNumero(int numero) {
-        this.numero = numero;
+        this.numero = numero;       
     }
 
     public void setProximo(No proximo) {

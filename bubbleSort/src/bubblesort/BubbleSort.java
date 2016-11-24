@@ -15,8 +15,8 @@ public class BubbleSort {
             System.out.print(vetor[i] + " ");
         }
         System.out.println("");*/
-        
-        int[] e = {9,8,7,6,5,4,3,2,1};
+
+        int[] e = {9, 8, 7, 6, 5, 4, 3, 2, 1};
         int[] s = new int[e.length];
         int menor;
 
@@ -25,7 +25,7 @@ public class BubbleSort {
                 s[0] = menor = i;
                 s[i]++;
             }
-        }        
+        }
     }
 
     public static int[] BubbleSort(int[] vetor) {
