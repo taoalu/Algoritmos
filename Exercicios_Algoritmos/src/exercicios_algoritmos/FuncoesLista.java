@@ -41,8 +41,7 @@ public class FuncoesLista {
                     System.out.print(array[i] + " ");
                 }
             }
-            System.out.println("");
-            //Testando
+            System.out.println("");            
         }
     }
 
